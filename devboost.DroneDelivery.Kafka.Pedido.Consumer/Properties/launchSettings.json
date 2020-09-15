@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Docker": {
+      "commandName": "Docker"
+    },
+    "devboost.DroneDelivery.Kafka.Pedidos.Consumer": {
+      "commandName": "Project"
+    }
+  }
+}

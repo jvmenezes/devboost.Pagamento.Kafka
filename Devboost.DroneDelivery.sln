@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.DroneDelivery.Unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.DroneDelivery.UnitTestsBDD", "Devboost.DroneDelivery.UnitTestsBDD\Devboost.DroneDelivery.UnitTestsBDD.csproj", "{F02401B8-A70C-4AF3-BF9A-5FAD0A0FE26D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagamentos", "Pagamentos", "{1ABF9155-5C10-4C7A-A07C-86B3C6B1623E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Pagamentos", "2 - Pagamentos", "{1ABF9155-5C10-4C7A-A07C-86B3C6B1623E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.Pagamentos.Api", "Devboost.Pagamentos.Api\Devboost.Pagamentos.Api.csproj", "{85EE6CEF-EA91-4B92-8C13-DE1AF54D90D4}"
 EndProject
@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.Pagamentos.Reposit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.Pagamentos.IoC", "Devboost.Pagamentos.IoC\Devboost.Pagamentos.IoC.csproj", "{C796E4DC-8E56-407F-B7BA-465D46415756}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DroneDelivery", "DroneDelivery", "{55984A5E-5BEF-43BF-806B-0241A7C6D2D8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - DroneDelivery", "1 - DroneDelivery", "{55984A5E-5BEF-43BF-806B-0241A7C6D2D8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.Pagamentos.DomainService", "Devboost.Pagamentos.DomainService\Devboost.Pagamentos.DomainService.csproj", "{EA038E3B-F6C2-4754-A224-42C70EA38020}"
 EndProject
@@ -53,9 +53,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.Pagamentos.UnitTestsBDD", "Devboost.Pagamentos.UnitTestsBDD\Devboost.Pagamentos.UnitTestsBDD.csproj", "{3C9CD6AE-6D17-4807-974D-679B27F73F6C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer", "Consumer", "{EEFCC5CD-D945-4A50-8238-F39A0E7D23AD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer Pedido", "Consumer Pedido", "{EEFCC5CD-D945-4A50-8238-F39A0E7D23AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "devboost.DroneDelivery.Kafka.Consumer", "devboost.DroneDelivery.Kafka.Consumer\devboost.DroneDelivery.Kafka.Consumer.csproj", "{815622B2-8F99-4F2D-8248-F994089332DF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Kafka Services", "3 - Kafka Services", "{5956519D-1458-451E-A822-CE31EF4B0D5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Producer Pagamento", "Producer Pagamento", "{7DB47672-FFBA-4553-BC0F-4CE50340A4AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.Pagamento.Kafka.Producer.Api", "devboost.Pagamento.Kafka.Producer\devboost.Pagamento.Kafka.Producer.Api.csproj", "{8A93766C-2C6B-4C3D-8602-A212AE46D5A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumer Pagamento", "Consumer Pagamento", "{E1EC1B92-053A-49A5-9DBF-BB84379CAB62}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.Kafka.Pagamentos.Consumer", "devboost.DroneDelivery.Kafka.Pagamento.Consumer\devboost.Kafka.Pagamentos.Consumer.csproj", "{2D8F10C7-EF9C-4157-A9EF-59CBB97D2252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "devboost.Kafka.Pedidos.Consumer", "devboost.Kafka.Pedidos.Consumer\devboost.Kafka.Pedidos.Consumer.csproj", "{FC8E8158-AFAD-4528-8EAC-DB36BE37F78D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,10 +133,18 @@ Global
 		{3C9CD6AE-6D17-4807-974D-679B27F73F6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C9CD6AE-6D17-4807-974D-679B27F73F6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C9CD6AE-6D17-4807-974D-679B27F73F6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{815622B2-8F99-4F2D-8248-F994089332DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{815622B2-8F99-4F2D-8248-F994089332DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{815622B2-8F99-4F2D-8248-F994089332DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{815622B2-8F99-4F2D-8248-F994089332DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A93766C-2C6B-4C3D-8602-A212AE46D5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A93766C-2C6B-4C3D-8602-A212AE46D5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A93766C-2C6B-4C3D-8602-A212AE46D5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A93766C-2C6B-4C3D-8602-A212AE46D5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8F10C7-EF9C-4157-A9EF-59CBB97D2252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8F10C7-EF9C-4157-A9EF-59CBB97D2252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8F10C7-EF9C-4157-A9EF-59CBB97D2252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8F10C7-EF9C-4157-A9EF-59CBB97D2252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8E8158-AFAD-4528-8EAC-DB36BE37F78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8E8158-AFAD-4528-8EAC-DB36BE37F78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8E8158-AFAD-4528-8EAC-DB36BE37F78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8E8158-AFAD-4528-8EAC-DB36BE37F78D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -155,7 +173,12 @@ Global
 		{38B496A7-2860-4246-AE4B-9699CF6C2160} = {55984A5E-5BEF-43BF-806B-0241A7C6D2D8}
 		{3EADE89E-3B7C-4C84-B8AC-747EE4172E00} = {55984A5E-5BEF-43BF-806B-0241A7C6D2D8}
 		{3C9CD6AE-6D17-4807-974D-679B27F73F6C} = {36C2BA87-3799-4D3D-8217-35D041763F10}
-		{815622B2-8F99-4F2D-8248-F994089332DF} = {EEFCC5CD-D945-4A50-8238-F39A0E7D23AD}
+		{EEFCC5CD-D945-4A50-8238-F39A0E7D23AD} = {5956519D-1458-451E-A822-CE31EF4B0D5F}
+		{7DB47672-FFBA-4553-BC0F-4CE50340A4AF} = {5956519D-1458-451E-A822-CE31EF4B0D5F}
+		{8A93766C-2C6B-4C3D-8602-A212AE46D5A0} = {7DB47672-FFBA-4553-BC0F-4CE50340A4AF}
+		{E1EC1B92-053A-49A5-9DBF-BB84379CAB62} = {5956519D-1458-451E-A822-CE31EF4B0D5F}
+		{2D8F10C7-EF9C-4157-A9EF-59CBB97D2252} = {E1EC1B92-053A-49A5-9DBF-BB84379CAB62}
+		{FC8E8158-AFAD-4528-8EAC-DB36BE37F78D} = {EEFCC5CD-D945-4A50-8238-F39A0E7D23AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B2AD133-1884-428B-8FC3-53615F5B6547}

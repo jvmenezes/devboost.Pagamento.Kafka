@@ -4,5 +4,6 @@
     {
         public string GatewayUrl { get; set; }
         public string DeliveryUrl { get; set; }
+        public string ProducerPagamentoUrl { get; set; }
     }
 }

@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using System.Diagnostics.CodeAnalysis;
 
-namespace Devboost.DroneDelivery.Api
+namespace devboost.Pagamento.Kafka.Producer
 {
-    [ExcludeFromCodeCoverage]
     public class Program
     {
         public static void Main(string[] args)

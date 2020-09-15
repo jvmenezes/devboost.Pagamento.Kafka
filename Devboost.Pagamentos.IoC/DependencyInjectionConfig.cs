@@ -23,7 +23,8 @@ namespace Devboost.Pagamentos.IoC
             services.AddSingleton(p => new ExternalConfigVO
             {
                 GatewayUrl = config.GetValue<string>("GATEWAY__URL"),
-                DeliveryUrl = config.GetValue<string>("DELIVERY_URL")
+                DeliveryUrl = config.GetValue<string>("DELIVERY_URL"),
+                ProducerPagamentoUrl = config.GetValue<string>("PRODUCER_PAGAMENTO_URL")
             });
 
             services.AddScoped<IPagamentoCommand, PagamentoCommand>();
