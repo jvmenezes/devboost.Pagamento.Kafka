@@ -7,7 +7,7 @@ namespace devboost.Kafka.Pagamentos.Consumer.Validators
     {
         public PedidoValidator()
         {
-            RuleFor(c => c.Id).NotEmpty().WithMessage("Preencha o campo 'Id' do pedido");
+            RuleFor(c => c.IdPedido).NotEmpty().WithMessage("Preencha o campo 'Id' do pedido");
             RuleFor(c => c.StatusPagamento).IsInEnum().WithMessage("Preencha o Status Pagamento correto");
         }
     }

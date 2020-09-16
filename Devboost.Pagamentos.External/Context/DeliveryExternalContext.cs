@@ -18,7 +18,7 @@ namespace Devboost.Pagamentos.External.Context
         public virtual async Task AtualizaStatusPagamento(DeliveryExternalParam deliverypParam)
         {
             //var url = $"{_config.DeliveryUrl}/entrega/inicia/pedido";
-            var url = $"{_config.ProducerPagamentoUrl}/producer/statuspagamento"; //Chamando a API Producer Pagamento para indexar essa informação de status como tópico no Kafka
+            var url = $"{_config.ProducerPagamentoUrl}/producerpagamento/statuspagamento"; //Chamando a API Producer Pagamento para indexar essa informação de status como tópico no Kafka
             await url.PostJsonAsync(deliverypParam)
                 .ConfigureAwait(false);
         }

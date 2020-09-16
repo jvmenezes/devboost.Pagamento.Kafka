@@ -3,10 +3,12 @@ using devboost.Pagamento.Kafka.Producer.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace devboost.Pagamento.Kafka.Producer.Controller
 {
-    [Route("api/[controller]")]
+    [Route("v1/[controller]")]
     [ApiController]
     public class ProducerPagamentoController : ControllerBase
     {
@@ -17,7 +19,7 @@ namespace devboost.Pagamento.Kafka.Producer.Controller
             _configuration = configuration;
         }
 
-        [HttpPost("producer/statuspagamento")]
+        [HttpPost("statuspagamento")]
         [ProducesResponseType(typeof(string), 201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
@@ -28,14 +30,16 @@ namespace devboost.Pagamento.Kafka.Producer.Controller
 
         private string SendMessageByKafkaStatusPedido(Pedido pedido)
         {
+            var values = JsonSerializer.Serialize(pedido);
+
             var config = new ProducerConfig { BootstrapServers = "localhost:9092" };
 
-            using (var producer = new ProducerBuilder<Guid, Pedido>(config).Build())
+            using (var producer = new ProducerBuilder<Null, string>(config).Build())
             {
                 try
                 {
                     var sendResult = producer
-                                        .ProduceAsync(_configuration["Kafka_Topic_II"], new Message<Guid, Pedido> { Key = pedido.Id, Value = pedido })
+                                        .ProduceAsync(_configuration["Kafka_Topic_II"], new Message<Null, string> { Value = values })
                                             .GetAwaiter()
                                                 .GetResult();
 
